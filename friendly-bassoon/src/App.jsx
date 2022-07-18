@@ -1,5 +1,11 @@
+import Projectbtn from './components/ProjectsBtn';
+
 function App() {
-  return <div></div>;
+  return (
+    <div className="App">
+      <Projectbtn />
+    </div>
+  );
 }
 
 export default App;
