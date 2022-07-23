@@ -1,7 +1,12 @@
 import React from 'react';
+import Header from '../../components/Header';
 
 function Loopstudio() {
-  return <div>Loopstudio</div>;
+  return (
+    <div>
+      <Header title="Loopstudio" />
+    </div>
+  );
 }
 
 export default Loopstudio;
