@@ -1,5 +1,8 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  variants: {
+    fill: ['hover', 'focus'], // this line does the trick
+  },
   theme: {
     extend: {},
     colors: {
