@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+:root {
+  --primary-white: hsl(0, 0%, 100%);
+  --primary-black: hsl(0, 0%, 0%);
+  --primary-dark-gray: hsl(0, 0%, 55%);
+  --primary-very-dark-gray: hsl(0, 0%, 41%);
+  --font-alata: 'Alata';
+  --font-josefin: 'Josefin Sans';
+}

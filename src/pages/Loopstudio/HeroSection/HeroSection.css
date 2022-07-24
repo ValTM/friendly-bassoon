@@ -1,0 +1,61 @@
+.hero--section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../../assets/loopstudios-img/mobile/image-hero.jpg') no-repeat
+      center/cover;
+  height: 500px;
+  font-family: var(--font-josefin);
+}
+.mobile--nav {
+  display: none;
+  width: 100%;
+  height: 500px;
+}
+.close--btn {
+  z-index: 1;
+}
+.mobile--nav li {
+  margin: 5px 0;
+}
+.dekstop--nav li {
+  margin-right: 10px;
+  position: relative;
+}
+.dekstop--nav li:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0px;
+  background-color: var(--primary-white);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.dekstop--nav li:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+@media screen and (min-width: 768px) {
+  .hero--text {
+    width: 550px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero--section {
+    padding: 0 100px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('../../../assets/loopstudios-img/desktop/image-hero.jpg') no-repeat
+        center/cover;
+    height: 700px;
+  }
+  .dekstop--nav li {
+    margin-right: 20px;
+  }
+  .hero--text p {
+    width: 700px;
+    height: 270px;
+    font-size: 80px;
+  }
+}
