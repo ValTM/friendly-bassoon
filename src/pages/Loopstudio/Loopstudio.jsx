@@ -1,11 +1,16 @@
 import React from 'react';
+import HeroSection from './HeroSection/HeroSection';
+import MainSection from './MainSection/MainSection';
 import Header from '../../components/Header';
+import './Loopstudio.css';
 
 function Loopstudio() {
   return (
-    <div>
+    <>
       <Header title="Loopstudio" />
-    </div>
+      <HeroSection />
+      <MainSection />
+    </>
   );
 }
 
