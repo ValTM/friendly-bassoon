@@ -1,7 +1,8 @@
 import React from 'react';
+import Header from '../../components/Header';
 import HeroSection from './HeroSection/HeroSection';
 import MainSection from './MainSection/MainSection';
-import Header from '../../components/Header';
+import Footer from './Footer/Footer';
 import './Loopstudio.css';
 
 function Loopstudio() {
@@ -10,6 +11,7 @@ function Loopstudio() {
       <Header title="Loopstudio" />
       <HeroSection />
       <MainSection />
+      <Footer />
     </>
   );
 }

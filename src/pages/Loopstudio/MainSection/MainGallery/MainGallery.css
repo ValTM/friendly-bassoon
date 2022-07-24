@@ -2,11 +2,8 @@
   font-family: var(--font-josefin);
 }
 .loop-earth {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.5)
-  );
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+    url('../../../../assets/loopstudios-img/mobile/image-deep-earth.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   height: 150px;
@@ -111,7 +108,6 @@
       url('../../../../assets/loopstudios-img/desktop/image-deep-earth.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-
     position: relative;
   }
 
