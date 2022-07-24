@@ -1,0 +1,212 @@
+.gallery--text {
+  font-family: var(--font-josefin);
+}
+.loop-earth {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 300px;
+  position: relative;
+}
+
+.loop-night {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+    url('../../../../assets/loopstudios-img/mobile/image-night-arcade.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 300px;
+  position: relative;
+}
+
+.loop-soccer {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+    url('../../../../assets/loopstudios-img/mobile/image-soccer-team.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 300px;
+  position: relative;
+}
+
+.loop-thegrid {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+    url('../../../..//assets/loopstudios-img/mobile/image-grid.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 300px;
+  position: relative;
+}
+
+.loop-from-above {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+    url('../../../../assets/loopstudios-img/mobile/image-from-above.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 300px;
+  position: relative;
+}
+
+.loop-pocket {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+    url('../../../../assets/loopstudios-img/mobile/image-pocket-borealis.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 300px;
+  position: relative;
+}
+
+.loop-curiosity {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+    url('../../../../assets/loopstudios-img/mobile/image-curiosity.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 300px;
+  position: relative;
+}
+
+.loop-eye {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+    url('../../../..//assets/loopstudios-img/mobile/image-fisheye.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 300px;
+  position: relative;
+}
+.items-text {
+  font-family: var(--font-josefin);
+}
+.item:hover {
+  opacity: 0.7;
+}
+
+@media screen and (min-width: 768px) {
+  .item {
+    width: 400px;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .item {
+    width: 250px;
+    height: 400px;
+  }
+
+  .loop-earth {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../../../../assets/loopstudios-img/desktop/image-deep-earth.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+  }
+
+  .loop-night {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../../../../assets/loopstudios-img/desktop/image-night-arcade.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .loop-soccer {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../../../../assets/loopstudios-img/desktop/image-soccer-team.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .loop-thegrid {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../../../..//assets/loopstudios-img/desktop/image-grid.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .loop-from-above {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../../../../assets/loopstudios-img/desktop/image-from-above.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .loop-pocket {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../../../../assets/loopstudios-img/desktop/image-pocket-borealis.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .loop-curiosity {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../../../../assets/loopstudios-img/desktop/image-curiosity.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .loop-eye {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../../../..//assets/loopstudios-img/desktop/image-fisheye.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .items {
+    width: 1300px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .gallery--nav {
+    padding: 0 300px;
+  }
+}
