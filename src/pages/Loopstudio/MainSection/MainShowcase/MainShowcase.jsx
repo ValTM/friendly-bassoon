@@ -10,7 +10,7 @@ function MainShowcase() {
         <h1 className="text-3xl uppercase mt-10">
           The leader in interactive VR
         </h1>
-        <p className="mt-5 mx-auto ">
+        <p className="mt-5 mx-auto text-loopDarkGray ">
           Founded in 2011, Loopstudios has been producing world-class virtual
           reality projects for some of the best companies around the globe. Our
           award-winning creations have transformed businesses through digital

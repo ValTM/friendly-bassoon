@@ -11,7 +11,7 @@ function Footer() {
     <div className="footer mt-40 bg-black lg:flex justify-between  content-center ">
       <div>
         <img className="mx-auto pt-10 lg:ml-0" src={logo} alt="" />
-        <ul className=" mt-10 flex flex-col text-center text-white text-2xl lg:flex-row">
+        <ul className="footer--nav mt-10 flex flex-col text-center text-white text-2xl lg:flex-row">
           <li>About</li>
           <li>Careers</li>
           <li>Events</li>
@@ -20,7 +20,7 @@ function Footer() {
         </ul>
       </div>
       <div>
-        <ul className=" socials mt-10 flex justify-center lg:justify-end">
+        <ul className="footer--nav--socials mt-10 flex justify-center lg:justify-end">
           <li>
             <img src={fb} alt="" />
           </li>
