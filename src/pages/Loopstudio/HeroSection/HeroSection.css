@@ -4,6 +4,8 @@
       center/cover;
   height: 500px;
   font-family: var(--font-josefin);
+  max-width: 2000px;
+  margin: 0 auto;
 }
 .mobile--nav {
   display: none;
