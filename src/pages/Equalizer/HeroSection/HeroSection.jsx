@@ -8,8 +8,8 @@ import './HeroSection.css';
 
 function HeroSection() {
   return (
-    <div className="eq--body ">
-      <div className="">
+    <div>
+      <div>
         <img
           id="logo"
           className="mt-10 ml-5 md:mt-20 md:ml-10 xl:ml-[100px]"
