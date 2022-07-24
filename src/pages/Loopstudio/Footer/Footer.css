@@ -35,3 +35,25 @@
     margin-right: 10px;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .footer .footer--nav li {
+    position: relative;
+  }
+  .footer .footer--nav li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -10px;
+    left: 0px;
+    background-color: var(--primary-white);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .footer .footer--nav li:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
