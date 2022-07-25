@@ -9,7 +9,7 @@ function Equalizer() {
   return (
     <>
       <Header title="Equalizer" />
-      <div className="eq--body">
+      <div className="eq--body font-sans">
         <HeroSection />
         <MainSection />
         <Footer />

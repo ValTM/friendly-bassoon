@@ -9,18 +9,22 @@ import RecapContainer from './RecapContainer';
 
 function TipsCalculator() {
   return (
-    <>
+    <div className="tips-body h-screen bg-tipsLightGrayishCyan">
       <Header title="Tips Calculator" />
-      <div className="tips-body h-[100%] w-[100%] bg-tipsLightGrayishCyan">
-        <img className="mx-auto pt-20" src={logo} alt="" />
-        <form className=" bg-white mt-20 rounded-t-[20px] p-10">
-          <BillContainer />
-          <TipsContainer />
-          <PeopleContainer />
-          <RecapContainer />
-        </form>
-      </div>
-    </>
+      <img className="mx-auto pt-10" src={logo} alt="" />
+      <form className=" bg-white mt-[100px] rounded-t-[20px] p-10 xl:w-[80%] mx-auto xl:rounded-xl 2xl:w-[65%]   ">
+        <div className="xl:flex xl:justify-between">
+          <div className="xl:w-[48%]">
+            <BillContainer />
+            <TipsContainer />
+            <PeopleContainer />
+          </div>
+          <div className="xl:w-[49%]">
+            <RecapContainer />
+          </div>
+        </div>
+      </form>
+    </div>
   );
 }
 
