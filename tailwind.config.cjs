@@ -1,8 +1,5 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  variants: {
-    fill: ['hover', 'focus'], // this line does the trick
-  },
   theme: {
     extend: {},
     colors: {
@@ -24,6 +21,11 @@ module.exports = {
       eqYellow: '#FFB964',
       eqBlack: '#191826',
       eqWhite: '#FCFAF9',
+      //Colors for Tips Calculator project
+      tipsCyan: '#26c0ab',
+      tipsDarkCyan: '#00494d',
+      tipsGrayishCyan: '#5e7a7d',
+      tipsLightGrayishCyan: '#c5e4e7',
     },
   },
   plugins: [],
