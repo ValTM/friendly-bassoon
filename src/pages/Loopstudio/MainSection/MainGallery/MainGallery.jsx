@@ -8,7 +8,7 @@ function MainGallery() {
       <h1 className="text-center gallery--text text-2xl uppercase lg:hidden ">
         Our Creations
       </h1>
-      <div className=" gallery--nav hidden mx-20 lg:flex lg:justify-between">
+      <div className=" gallery--nav hidden lg:flex lg:justify-between lg:w-[860px] lg:mx-auto xl:w-[1170px]">
         <h1 className="text-center gallery--text text-4xl uppercase ">
           Our Creations
         </h1>
