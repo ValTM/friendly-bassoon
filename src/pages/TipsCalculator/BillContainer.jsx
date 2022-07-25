@@ -8,7 +8,7 @@ function BillContainer() {
         Bill
       </label>
       <input
-        className=" mt-2 bg-tipsWhiteColor h-12 rounded-md text-right pr-4 text-2xl text-tipsDarkCyan font-bold"
+        className=" mt-2 bg-tipsWhiteColor h-12 rounded-md text-right pr-4 pl-9 text-2xl text-tipsDarkCyan font-bold"
         type="number"
         placeholder="0"
       />
