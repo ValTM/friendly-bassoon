@@ -1,4 +1,5 @@
 import React from 'react';
+import { blockInvalidChar } from '../invalidChar';
 
 function TipsContainer() {
   return (
@@ -25,6 +26,8 @@ function TipsContainer() {
         <input
           className="my-2  w-[49%] py-2 bg-tipsWhiteColor text-tipsDarkCyan text-center text-2xl rounded-lg font-bold text-right pr-2 pl-2 focus:outline-none focus:border-tipsCyan focus:ring-tipsCyan focus:ring-2 xl:pr-4"
           placeholder="Custom"
+          type="number"
+          onKeyDown={blockInvalidChar}
         />
       </div>
     </div>
