@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import './TipsCalculator.css';
 import BillContainer from './BillContainer';
 import logo from '../../assets/tips-calc-img/logo.svg';
+import TipsContainer from './TipsContainer';
 
 function TipsCalculator() {
   return (
@@ -12,6 +13,7 @@ function TipsCalculator() {
         <img className="mx-auto pt-20" src={logo} alt="" />
         <form className="h-[700px] bg-white mt-20 rounded-t-[20px] p-10">
           <BillContainer />
+          <TipsContainer />
         </form>
       </div>
     </>
