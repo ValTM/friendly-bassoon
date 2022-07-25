@@ -23,7 +23,7 @@ function TipsContainer() {
           50%
         </div>
         <input
-          className="my-2 mr-3 w-[45%] py-2 bg-tipsWhiteColor text-tipsDarkCyan text-center text-2xl rounded-lg font-bold text-right pr-2 pl-2 "
+          className="my-2 mr-3 w-[45%] py-2 bg-tipsWhiteColor text-tipsDarkCyan text-center text-2xl rounded-lg font-bold text-right pr-2 pl-2 focus:outline-none focus:border-tipsCyan focus:ring-tipsCyan focus:ring-2"
           placeholder="Custom"
         />
       </div>
