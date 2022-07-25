@@ -18,6 +18,7 @@ module.exports = {
       tipsDarkCyan: '#00494d',
       tipsGrayishCyan: '#5e7a7d',
       tipsLightGrayishCyan: '#c5e4e7',
+      tipsWhiteColor: '#f3f9fa',
     },
   },
   plugins: [],
