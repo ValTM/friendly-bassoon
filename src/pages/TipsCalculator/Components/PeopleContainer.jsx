@@ -1,5 +1,5 @@
 import React from 'react';
-import people from '../../assets/tips-calc-img/icon-person.svg';
+import people from '../../../assets/tips-calc-img/icon-person.svg';
 
 function PeopleContainer() {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import dollar from '../../assets/tips-calc-img/icon-dollar.svg';
+import dollar from '../../../assets/tips-calc-img/icon-dollar.svg';
 
 function BillContainer() {
   return (
