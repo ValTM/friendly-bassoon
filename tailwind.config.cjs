@@ -27,6 +27,12 @@ module.exports = {
       tipsGrayishCyan: '#5e7a7d',
       tipsLightGrayishCyan: '#c5e4e7',
       tipsWhiteColor: '#f3f9fa',
+      // Colors for Githun App project
+      gLightBlue: '#0079ff',
+      gLightGray: '#697c9a',
+      gLightDarkBlue: '#4b6a9b',
+      gLightDarkGray: '#2b3442',
+      gLightLightGray: '#f6f8ff',
     },
   },
   plugins: [],
