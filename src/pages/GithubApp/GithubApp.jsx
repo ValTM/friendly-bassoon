@@ -7,16 +7,18 @@ import Container from './Components/Container';
 
 function GithubApp() {
   return (
-    <div>
-      <Header title="Github App" />
-      <div className="g-body h-screen bg-gLightLightGray">
-        <div className="w-[90%] mx-auto pt-10">
-          <Navbar />
-          <SearchBar />
-          <Container />
+    <>
+      <div>
+        <Header title="Github App" />
+        <div className="g-body h-screen bg-gLightLightGray">
+          <div className="w-[90%] mx-auto pt-[100px] md:w-[70%] 2xl:w-[800px]  ">
+            <Navbar />
+            <SearchBar />
+            <Container />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
