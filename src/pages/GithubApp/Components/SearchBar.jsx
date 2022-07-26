@@ -1,19 +1,52 @@
-import React from 'react';
-import search from '../../../assets/github-app-img/icon-search.svg';
+// import React from 'react';
+// import octocat from '../../../assets/github-app-img/octocat.png';
+// import search from '../../../assets/github-app-img/icon-search.svg';
+// import { useState } from 'react';
 
-function SearchBar() {
-  return (
-    <div className="mt-10 relative bg-white rounded-xl shadow-xl">
-      <input
-        className="  bg-white h-16 rounded-xl   w-[100%] placeholder:text-gLightDarkBlue pl-10 text-sm md:placeholder:text-xl md:text-xl md:pl-16 "
-        placeholder="Search GitHub username.. "
-      />
-      <img className="absolute bottom-5 left-2 md:left-5" src={search} alt="" />
-      <button className="absolute right-2 bottom-2 bg-gLightBlue text-white p-3 rounded-xl hover:opacity-70	">
-        Search
-      </button>
-    </div>
-  );
-}
+// function SearchBar() {
+// const [show, setShow] = useState(false);
+// const [user, setUser] = useState('');
+// const [githubData, setGithubData] = useState({
+//   name: 'The Octocat',
+//   avatar_url: octocat,
+//   join_date: '25 Jan 2011',
+//   username: 'octocat',
+//   bio: 'This user has no bio',
+//   followers: '3938',
+//   following: '9',
+//   public_repos: '8',
+//   location: 'San Francisco',
+//   blog: 'https://github.blog',
+//   twitter_username: 'Not Available',
+//   company: '@github',
+// });
 
-export default SearchBar;
+// const handleShowClick = async () => {
+//   const response = await fetch(`https://api.github.com/users/${user}`);
+//   const data = await response.json();
+
+//   if (!data.message) {
+//     setGithubData({
+//       name: data.name,
+//       avatar_url: data.avatar_url,
+//       username: data.login,
+//       bio: data.bio,
+//       followers: data.followers,
+//       following: data.following,
+//       public_repos: data.public_repos,
+//       location: data.location,
+//       blog: data.blog,
+//       twitter_username: data.twitter_username,
+//       company: data.company,
+//     });
+//     setShow(false);
+//   } else {
+//     setShow(true);
+//   }
+// };
+// return (
+
+// );
+// }
+
+// export default SearchBar;
