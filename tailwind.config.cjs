@@ -13,8 +13,11 @@ module.exports = {
         200: '#e5e7eb',
         300: '#d1d5db',
       },
-      // Colors for Loopstudio project
-      loopDarkGray: '#696969',
+      gLightBlue: '#0079ff',
+      gLightGray: '#697c9a',
+      gLightDarkBlue: '#4b6a9b',
+      gLightDarkGray: '#2b3442',
+      gLightLightGray: '#f6f8ff',
     },
   },
   plugins: [],
