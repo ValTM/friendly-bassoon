@@ -1,5 +1,6 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {},
     fontFamily: {
@@ -18,6 +19,8 @@ module.exports = {
       gLightDarkBlue: '#4b6a9b',
       gLightDarkGray: '#2b3442',
       gLightLightGray: '#f6f8ff',
+      gDarkDarGray: '#141D2F',
+      gDarkBlue: '#1E2A47',
     },
   },
   plugins: [],
