@@ -20,9 +20,11 @@
   #pattern1 {
     width: 400px;
   }
-  #logo,
   #hero--h1,
   #hero--p {
     margin-left: 0;
+  }
+  #logo {
+    margin-left: 20px;
   }
 }
