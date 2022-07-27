@@ -9,7 +9,7 @@ import search from '../../../assets/github-app-img/icon-search.svg';
 import dayjs from 'dayjs';
 
 function Container() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState('');
   const [user, setUser] = useState('');
   const [githubData, setGithubData] = useState({
     name: 'The Octocat',
@@ -76,7 +76,11 @@ function Container() {
         >
           Search
         </button>
-        {show && <div className="g-no-result-msg">User not found !</div>}
+        {show && (
+          <div className="absolute -top-8 right-0 text-[red] font-bold md:top-5 md:right-28">
+            No results!
+          </div>
+        )}
       </div>
       <div className="mt-5 bg-white rounded-xl shadow-2xl px-5 py-10 md:px-10 2xl:pl-40 2xl:relative">
         <div className="flex items-center justify-around md:justify-start 2xl:ml-5 ">
@@ -91,7 +95,7 @@ function Container() {
             </h1>
             <p className="text-gLightBlue">{githubData.username}</p>
             <p className="text-gLightGray 2xl:absolute right-10 top-10">
-              Joined ff
+              Joined {githubData.join_date}
             </p>
           </div>
         </div>
@@ -124,7 +128,7 @@ function Container() {
             </p>
           </div>
         </div>
-        <div className="  flex flex-col justify-around flex-wrap mt-8 md:flex-row md:h-[70px] 2xl:justify-start 2xl:ml-12  ">
+        <div className=" w-[100%] flex flex-col justify-around flex-wrap mt-8 2xl:justify-start 2xl:ml-12 2xl:flex-row ">
           <div>
             <div className="flex">
               <img src={location} alt="" />
@@ -136,16 +140,15 @@ function Container() {
                 </p>
               )}
             </div>
-            <div className="flex mt-2 md:mt-5 ">
-              <img src={website} alt="" />
+            <div className="flex mt-2 md:mt-5 break-all   2xl:w-[300px] ">
+              <img className="h-5" src={website} alt="" />
               {githubData.website === null ? (
-                <a className="ml-4 text-gLightDarkBlue hover:underline" href="">
-                  Not Available
-                </a>
+                <p className="ml-4 text-gLightDarkBlue">Not Available</p>
               ) : (
                 <a
                   className="ml-4 text-gLightDarkBlue hover:underline"
                   href={githubData.blog}
+                  target="blank"
                 >
                   {githubData.blog}
                 </a>
@@ -153,7 +156,7 @@ function Container() {
             </div>
           </div>
           <div className="2xl:ml-20">
-            <div className="flex mt-2 md:mt-0">
+            <div className="flex mt-2 md:mt-5 2xl:mt-0">
               <img src={twiiter} alt="" />
               {githubData.twitter_username === null ? (
                 <p className="ml-4 text-gLightGray">Not Available</p>
