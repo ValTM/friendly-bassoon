@@ -165,7 +165,7 @@ function Container() {
                   />
                 </g>
               </svg>
-              {githubData.website === null ? (
+              {!githubData.blog ? (
                 <p className="dark:text-gLightLightGray ml-4 text-gLightDarkBlue transition duration-300">
                   Not Available
                 </p>
