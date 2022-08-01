@@ -149,10 +149,10 @@ function Ecommerce() {
               Featuring a durable rubber outer sole, they’ll withstand
               everything the weather can offer.
             </p>
-            <div className="flex justify-between items-center">
-              <div className="flex items-center justify-between w-[170px]">
+            <div className="flex justify-between items-center xl:flex-col xl:items-start  ">
+              <div className="flex items-center justify-between w-[170px] xl:w-[200px]">
                 <h1 className="text-3xl font-bold">$125.00</h1>
-                <p className="text-lg inline-block  rounded-md px-2 py-1  bg-[#ffd0af] text-[#FF7E1B] font-bold">
+                <p className="text-lg inline-block  rounded-md px-2 py-1  bg-[#ffd0af] text-[#FF7E1B] font-bold xl:mt-5">
                   50%
                 </p>
               </div>
