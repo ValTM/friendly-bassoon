@@ -1,5 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 
 .ec--body {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+.ec--body .desktop--navbar li {
+  position: relative;
+}
+.ec--body .desktop--navbar li::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  top: 60px;
+  background-color: orange;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.ec--body .desktop--navbar li:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
