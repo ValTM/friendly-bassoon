@@ -15,12 +15,13 @@ import previous from '../../assets/ecommerce-img/icon-previous.svg';
 import next from '../../assets/ecommerce-img/icon-next.svg';
 import minus from '../../assets/ecommerce-img/icon-minus.svg';
 import plus from '../../assets/ecommerce-img/icon-plus.svg';
+import DesktopGallery from './DesktopGallery/DesktopGallery';
 
 function Ecommerce() {
   const [nav, showNav] = useState(false);
   const [toggle, setToggle] = useState(false);
-  const [index, setIndex] = useState(0);
   const images = [produc1, produc2, produc3, produc4];
+  const [index, setIndex] = useState(0);
 
   const openNav = () => {
     showNav(!nav);
@@ -101,7 +102,7 @@ function Ecommerce() {
             </>
           )}
         </nav>
-        <div className="xl:flex mx-auto  items-center xl:w-[1200px] justify-around xl:my-[80px]">
+        <div className="xl:flex mx-auto  items-center xl:w-[1200px] justify-around xl:mt-[50px]">
           <div className="">
             {toggle ? (
               <div className="sm:w-[500px] mx-auto">
@@ -120,7 +121,7 @@ function Ecommerce() {
                 </div>
               </div>
             ) : (
-              <div className="sm:w-[500px] mx-auto">
+              <div className="sm:w-[500px] mx-auto xl:hidden">
                 <img className="relative" src={images[index]} alt="" />
                 <div className=" flex w-screen justify-between  relative -mt-[200px] sm:w-[500px] sm:px-0 sm:-mt-[270px] xl:hidden">
                   <img
@@ -136,6 +137,9 @@ function Ecommerce() {
                 </div>
               </div>
             )}
+            <div>
+              <DesktopGallery index={index} />
+            </div>
           </div>
           <div className="h-[500px] flex flex-col justify-between px-6 py-4 mt-[160px] sm:mt-[250px] sm:mx-auto sm:h-[450px] sm:w-[540px] xl:mx-0 xl:mt-0 xl:px-0 xl:w-[500px] xl:h-[450px]">
             <h1 className="text-[#FF7E1B] font-bold xl:text-xl">
