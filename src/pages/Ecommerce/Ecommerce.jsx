@@ -7,22 +7,17 @@ import avatar from '../../assets/ecommerce-img/image-avatar.png';
 import logo from '../../assets/ecommerce-img/logo.svg';
 import { useState } from 'react';
 import './Ecommerce.css';
-import produc1 from '../../assets/ecommerce-img/image-product-1.jpg';
-import produc2 from '../../assets/ecommerce-img/image-product-2.jpg';
-import produc3 from '../../assets/ecommerce-img/image-product-3.jpg';
-import produc4 from '../../assets/ecommerce-img/image-product-4.jpg';
-import previous from '../../assets/ecommerce-img/icon-previous.svg';
-import next from '../../assets/ecommerce-img/icon-next.svg';
+
 import minus from '../../assets/ecommerce-img/icon-minus.svg';
 import plus from '../../assets/ecommerce-img/icon-plus.svg';
 import DesktopGallery from './DesktopGallery/DesktopGallery';
 import Cart from './Cart';
+import GalleryComponent from './DesktopGallery/GalleryComponent';
 
 function Ecommerce() {
   const [nav, showNav] = useState(false);
   const [toggle, setToggle] = useState(false);
-  const images = [produc1, produc2, produc3, produc4];
-  const [index, setIndex] = useState(0);
+  const [index] = useState(0);
   const [items, setItems] = useState(0);
   let [quantity, setQuantity] = useState('');
   const [cartModal, setCartModal] = useState(false);
@@ -30,22 +25,6 @@ function Ecommerce() {
   const openNav = () => {
     showNav(!nav);
     toggle ? setToggle(false) : setToggle(true);
-  };
-
-  const slideNext = () => {
-    if (index === images.length - 1) {
-      setIndex(0);
-    } else {
-      setIndex(index + 1);
-    }
-  };
-
-  const slidePrev = () => {
-    if (index === 0) {
-      setIndex(images.length - 1);
-    } else {
-      setIndex(index - 1);
-    }
   };
 
   const increment = () => {
@@ -152,39 +131,13 @@ function Ecommerce() {
           )}
         </nav>
         <div className="xl:flex mx-auto  items-center xl:w-[1200px] justify-around xl:mt-[50px]">
-          <div className="">
+          <div>
             {toggle ? (
-              <div className="sm:w-[500px] mx-auto">
-                <img className="" src={images[index]} alt="" />
-                <div className="flex w-screen justify-between  relative -mt-[200px] sm:w-[500px] sm:px-0 sm:-mt-[270px]">
-                  <img
-                    className="bg-white rounded-full px-4 py-3 ml-2 "
-                    src={previous}
-                    onClick={slidePrev}
-                  />
-                  <img
-                    className="opacity-50 bg-white rounded-full px-4 py-3 mr-2 "
-                    src={next}
-                    onClick={slideNext}
-                  />
-                </div>
+              <div className="opacity-30">
+                <GalleryComponent isMobileGallery />
               </div>
             ) : (
-              <div className="sm:w-[500px] mx-auto xl:hidden">
-                <img className="relative" src={images[index]} alt="" />
-                <div className=" flex w-screen justify-between  relative -mt-[200px] sm:w-[500px] sm:px-0 sm:-mt-[270px] xl:hidden">
-                  <img
-                    className="bg-white rounded-full px-4 py-3 ml-2 "
-                    src={previous}
-                    onClick={slidePrev}
-                  />
-                  <img
-                    className=" bg-white rounded-full px-4 py-3 mr-2 "
-                    src={next}
-                    onClick={slideNext}
-                  />
-                </div>
-              </div>
+              <GalleryComponent isMobileGallery />
             )}
             <div>
               <DesktopGallery index={index} />
