@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../../components/Header';
+
 import HeroSection from './HeroSection/HeroSection';
 import MainSection from './MainSection/MainSection';
 import Footer from './Footer/Footer';
