@@ -14,6 +14,7 @@ module.exports = {
         200: '#e5e7eb',
         300: '#d1d5db',
       },
+      // Colors for Github App project
       gLightBlue: '#0079ff',
       gLightGray: '#697c9a',
       gLightDarkBlue: '#4b6a9b',
