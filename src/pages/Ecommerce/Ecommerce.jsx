@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../../components/Header';
+
 import hamburger from '../../assets/ecommerce-img/icon-menu.svg';
 import close from '../../assets/ecommerce-img/icon-close.svg';
 import cart from '../../assets/ecommerce-img/icon-cart.svg';
