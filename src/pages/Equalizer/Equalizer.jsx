@@ -6,11 +6,6 @@ function Equalizer() {
     <>
       <div>
         <Header title="Equalizer" />
-        <div className="eq--body font-sans">
-          <HeroSection />
-          <MainSection />
-          <Footer />
-        </div>
       </div>
     </>
   );
