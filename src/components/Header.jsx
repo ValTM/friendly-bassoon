@@ -10,7 +10,8 @@ function Header(props) {
           &#129056; Go back
         </p>
       </Link>
-      <p className=" font-sans text-2xl mt-2 font-bold text-center tracking-widest sm:ml-10 sm:mt-0 ">
+      <p className=" text-2xl mt-2 font-bold text-center tracking-widest sm:ml-10 sm:mt-0 ">
+        {' '}
         {props.title}
       </p>
     </div>

@@ -3,11 +3,9 @@ import Header from '../../components/Header';
 
 function Equalizer() {
   return (
-    <>
-      <div>
-        <Header title="Equalizer" />
-      </div>
-    </>
+    <div>
+      <Header title="Equalizer" />
+    </div>
   );
 }
 
