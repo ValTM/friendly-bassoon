@@ -17,17 +17,17 @@ function HeroSection() {
           alt=""
         />
         <img
-          className=" absolute top-0 z-[-1] right-0 md:hidden  "
+          className="absolute top-0 z-[-1] right-0 md:hidden"
           src={mobileBgPattern}
           alt=""
         />
         <img
-          className=" hidden absolute  top-[-200px] z-[-1] left-[-100px] md:block xl:hidden  "
+          className="hidden absolute  top-[-200px] z-[-1] left-[-100px] md:block xl:hidden"
           src={tabletBgPattern}
           alt=""
         />
         <img
-          className=" hidden absolute top-[-250px] left-[-100px] z-[-1] l xl:block  "
+          className="hidden absolute top-[-250px] left-[-100px] z-[-1] l xl:block"
           src={desktopPattern}
           alt=""
         />

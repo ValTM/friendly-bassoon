@@ -13,7 +13,7 @@ function MainSection() {
           alt=""
         />
         <img
-          className="absolute z-[0] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-5 md:top-[170px] xl:mt-20 xl:-ml-[90px] 2xl:-ml-[50px] "
+          className="absolute z-[0] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-5 md:top-[170px] xl:mt-20 xl:-ml-[90px] 2xl:-ml-[50px]"
           src={bgPattern2}
           alt=""
         />
