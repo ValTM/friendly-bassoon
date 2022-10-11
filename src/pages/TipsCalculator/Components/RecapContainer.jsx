@@ -13,18 +13,6 @@ function RecapContainer({
   tipAmount,
   totalAmount,
 }) {
-  RecapContainer.propTypes = {
-    tip: PropTypes.node.isRequired,
-    bill: PropTypes.node.isRequired,
-    nbPeople: PropTypes.node.isRequired,
-    setBill: PropTypes.node.isRequired,
-    setTip: PropTypes.node.isRequired,
-    setNbPeople: PropTypes.node.isRequired,
-    setTipAmount: PropTypes.node.isRequired,
-    setTotalAmount: PropTypes.node.isRequired,
-    tipAmount: PropTypes.node.isRequired,
-    totalAmount: PropTypes.node.isRequired,
-  };
   const handleReset = () => {
     setBill(0);
     setTip(0);
@@ -64,27 +52,35 @@ function RecapContainer({
           </p>
         )}
       </div>
-      {tipAmount > 0 &&
-      totalAmount > 0 &&
-      bill != null &&
-      tip != null &&
-      nbPeople != null ? (
-        <button
-          className=" mt-7 py-3 w-[100%] bg-tipsCyan rounded-lg text-2xl text-tipsDarkCyan font-bold tracking-widest text-center hover:bg-tipsLightGrayishCyan xl:mt-40"
-          onClick={handleReset}
-        >
-          RESET
-        </button>
-      ) : (
-        <button
-          className=" mt-7 py-3 w-[100%] bg-[#0D686D] rounded-lg text-2xl text-tipsDarkCyan font-bold tracking-widest text-center hover:bg-tipsLightGrayishCyan xl:mt-40"
-          onClick={handleReset}
-        >
-          RESET
-        </button>
-      )}
+      <button
+        className={`${
+          tipAmount > 0 &&
+          totalAmount > 0 &&
+          bill != null &&
+          tip != null &&
+          nbPeople != null
+            ? 'bg-tipsCyan'
+            : 'bg-[#0D686D]'
+        }  mt-7 py-3 w-[100%] bg-tipsCyan rounded-lg text-2xl text-tipsDarkCyan font-bold tracking-widest text-center hover:bg-tipsLightGrayishCyan xl:mt-40`}
+        onClick={handleReset}
+      >
+        RESET
+      </button>
     </div>
   );
 }
+
+RecapContainer.propTypes = {
+  tip: PropTypes.number.isRequired,
+  bill: PropTypes.number.isRequired,
+  nbPeople: PropTypes.number.isRequired,
+  setBill: PropTypes.any,
+  setTip: PropTypes.any,
+  setNbPeople: PropTypes.any,
+  setTipAmount: PropTypes.any,
+  setTotalAmount: PropTypes.any,
+  tipAmount: PropTypes.any,
+  totalAmount: PropTypes.any,
+};
 
 export default RecapContainer;

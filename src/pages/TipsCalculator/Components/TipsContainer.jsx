@@ -1,16 +1,14 @@
 import React from 'react';
 import { blockInvalidChar } from '../invalidChar';
 import PropTypes from 'prop-types';
+// import { useRef } from 'react';
 
 function TipsContainer({ setTip }) {
-  TipsContainer.propTypes = {
-    setTip: PropTypes.node.is,
-  };
   const handleButtonClick = (e) => {
+    e.preventDefault();
     setTip(parseInt(e.target.value));
     const btn = document.getElementById(e.target.id);
     let btns = Array.from(document.getElementById('btn--container').children);
-    console.log(btns);
     for (let btn of btns) {
       if (btn.classList.contains('bg-tipsCyan')) {
         btn.classList.remove('bg-tipsCyan');
@@ -19,13 +17,22 @@ function TipsContainer({ setTip }) {
     }
     btn.classList.add('bg-tipsCyan');
   };
+  const buttonValues = [
+    { value: 5, id: 1 },
+    { value: 10, id: 2 },
+    { value: 15, id: 3 },
+    { value: 25, id: 4 },
+    { value: 50, id: 5 },
+  ];
 
   const maxLengthCheck = (event) => {
-    if (event.target.value.length > event.target.maxLength) {
-      event.target.value = event.target.value.slice(1, event.target.maxLength);
+    const eventTarget = event.target;
+
+    if (eventTarget.value.length > eventTarget.maxLength) {
+      eventTarget.value = eventTarget.value.slice(1, eventTarget.maxLength);
     }
-    if (event.target.value > 100) {
-      event.target.value = 0;
+    if (eventTarget.value > 100) {
+      eventTarget.value = null;
     }
   };
   return (
@@ -34,46 +41,21 @@ function TipsContainer({ setTip }) {
         Select Tip %
       </label>
       <div id="btn--container" className=" flex flex-wrap justify-between mt-2">
-        <button
-          id="1"
-          className=" my-2  w-[49%] py-2 bg-tipsDarkCyan text-tipsWhiteColor text-center text-2xl rounded-lg font-bold hover:bg-tipsCyan hover:text-tipsDarkCyan "
-          value={5}
-          onClick={handleButtonClick}
-        >
-          5%
-        </button>
-        <button
-          id="2"
-          className="my-2  w-[49%] py-2 bg-tipsDarkCyan text-tipsWhiteColor text-center text-2xl rounded-lg font-bold hover:bg-tipsCyan hover:text-tipsDarkCyan"
-          value={10}
-          onClick={handleButtonClick}
-        >
-          10%
-        </button>
-        <button
-          id="3"
-          className="my-2  w-[49%] py-2 bg-tipsDarkCyan text-tipsWhiteColor text-center text-2xl rounded-lg font-bold hover:bg-tipsCyan hover:text-tipsDarkCyan"
-          value={15}
-          onClick={handleButtonClick}
-        >
-          15%
-        </button>
-        <button
-          id="4"
-          className="my-2  w-[49%] py-2 bg-tipsDarkCyan text-tipsWhiteColor text-center text-2xl rounded-lg font-bold hover:bg-tipsCyan hover:text-tipsDarkCyan"
-          value={25}
-          onClick={handleButtonClick}
-        >
-          25%
-        </button>
-        <button
-          id="5"
-          className="my-2  w-[49%] py-2 bg-tipsDarkCyan text-tipsWhiteColor text-center text-2xl rounded-lg font-bold hover:bg-tipsCyan hover:text-tipsDarkCyan"
-          value={50}
-          onClick={handleButtonClick}
-        >
-          50%
-        </button>
+        {buttonValues.map((data, i) => {
+          return (
+            <React.Fragment key={i}>
+              <button
+                // ref={btn}
+                id={data.id}
+                className="my-2  w-[49%] py-2 bg-tipsDarkCyan text-tipsWhiteColor text-center text-2xl rounded-lg font-bold hover:bg-tipsCyan hover:text-tipsDarkCyan"
+                value={data.value}
+                onClick={handleButtonClick}
+              >
+                {data.value}%
+              </button>
+            </React.Fragment>
+          );
+        })}
         <input
           className="my-2  w-[49%] py-2 bg-tipsWhiteColor text-tipsDarkCyan text-center text-2xl rounded-lg font-bold text-right pr-2 pl-2 focus:outline-none focus:border-tipsCyan focus:ring-tipsCyan focus:ring-2 xl:pr-4"
           placeholder="Custom"
@@ -87,5 +69,9 @@ function TipsContainer({ setTip }) {
     </div>
   );
 }
+
+TipsContainer.propTypes = {
+  setTip: PropTypes.any,
+};
 
 export default TipsContainer;
