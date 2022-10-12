@@ -8,10 +8,7 @@ function Cart(props) {
     <div className="w-[350px] h-[250px]  bg-white shadow-2xl absolute rounded-2xl top-[70px] right-[15px] z-[20] xl:top-[50px] ">
       <p className="font-bold border-b-2 px-6 py-4 ">Cart</p>
       {props.items === 0 ? (
-        <p
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-        "
-        >
+        <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           Your cart is empty
         </p>
       ) : (
@@ -42,8 +39,8 @@ function Cart(props) {
 }
 
 Cart.propTypes = {
-  items: PropTypes.number,
-  checkout: PropTypes.number,
+  items: PropTypes.func,
+  checkout: PropTypes.func,
 };
 
 export default Cart;

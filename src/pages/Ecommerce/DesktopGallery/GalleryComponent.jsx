@@ -12,8 +12,7 @@ function GalleryComponent(props) {
   const [modal, setModal] = useState(false);
   const [index, setIndex] = useState(props.index || 0);
   const images = [produc1, produc2, produc3, produc4];
-  const { isDesktopGallery } = props;
-  const { isMobileGallery } = props;
+  const { isDesktopGallery, isMobileGallery } = props;
 
   const toggleModal = () => {
     setModal(!modal);
