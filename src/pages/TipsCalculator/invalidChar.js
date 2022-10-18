@@ -1,2 +1,3 @@
 export const blockInvalidChar = (e) =>
-  ['e', 'E', '+', '-'].includes(e.key) && e.preventDefault();
+  ['i', 'e', 'E', '+', '-', '.', ',', '='].includes(e.key) &&
+  e.preventDefault();
