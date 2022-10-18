@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useImperativeHandle, useRef } from 'react';
 import people from '../../../assets/tips-calc-img/icon-person.svg';
 import { blockInvalidChar } from '../invalidChar';
 import PropTypes from 'prop-types';
 
-function PeopleContainer({ nbPeople, setNbPeople }) {
+function PeopleContainer({ nbPeople, setNbPeople }, ref) {
+  PeopleContainer.propTypes = {
+    nbPeople: PropTypes.number,
+    setNbPeople: PropTypes.any,
+  };
+
+  const peopleRef = useRef(0);
+
+  useImperativeHandle(ref, () => ({
+    resetFields() {
+      peopleRef.current.value = '';
+    },
+  }));
+
   return (
     <div className="mt-10 flex flex-col relative">
       <div>
@@ -11,6 +24,7 @@ function PeopleContainer({ nbPeople, setNbPeople }) {
           Number of People
         </label>
         <input
+          ref={peopleRef}
           className={`mt-2 w-[100%] bg-tipsWhiteColor h-12 rounded-md text-right pr-4 pl-9 text-2xl text-tipsDarkCyan font-bold focus:outline-none ${
             nbPeople === 0
               ? 'focus:border-[#e11d48] focus:ring-[#e11d48]'
@@ -38,9 +52,4 @@ function PeopleContainer({ nbPeople, setNbPeople }) {
   );
 }
 
-PeopleContainer.propTypes = {
-  nbPeople: PropTypes.any,
-  setNbPeople: PropTypes.any,
-};
-
-export default PeopleContainer;
+export default React.forwardRef(PeopleContainer);

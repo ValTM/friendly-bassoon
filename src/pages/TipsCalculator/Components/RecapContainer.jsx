@@ -5,21 +5,10 @@ function RecapContainer({
   tip,
   bill,
   nbPeople,
-  setBill,
-  setTip,
-  setNbPeople,
-  setTipAmount,
-  setTotalAmount,
+  reset,
   tipAmount,
   totalAmount,
 }) {
-  const handleReset = () => {
-    setBill(0);
-    setTip(0);
-    setNbPeople(0);
-    setTipAmount(0);
-    setTotalAmount(0);
-  };
   return (
     <div className=" bg-tipsDarkCyan mt-10 rounded-xl px-5 py-7 xl:mt-0 xl:h-[100%] xl:px-10 xl:py-10">
       <div className="flex justify-between items-center ">
@@ -62,7 +51,10 @@ function RecapContainer({
             ? 'bg-tipsCyan'
             : 'bg-[#0D686D]'
         }  mt-7 py-3 w-[100%] bg-tipsCyan rounded-lg text-2xl text-tipsDarkCyan font-bold tracking-widest text-center hover:bg-tipsLightGrayishCyan xl:mt-40`}
-        onClick={handleReset}
+        onClick={(e) => {
+          e.preventDefault();
+          reset();
+        }}
       >
         RESET
       </button>
@@ -74,13 +66,9 @@ RecapContainer.propTypes = {
   tip: PropTypes.number.isRequired,
   bill: PropTypes.number.isRequired,
   nbPeople: PropTypes.number.isRequired,
-  setBill: PropTypes.any,
-  setTip: PropTypes.any,
-  setNbPeople: PropTypes.any,
-  setTipAmount: PropTypes.any,
-  setTotalAmount: PropTypes.any,
-  tipAmount: PropTypes.any,
-  totalAmount: PropTypes.any,
+  reset: PropTypes.func,
+  tipAmount: PropTypes.string,
+  totalAmount: PropTypes.string,
 };
 
 export default RecapContainer;

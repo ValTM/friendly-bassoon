@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { useRef, useImperativeHandle } from 'react';
 import dollar from '../../../assets/tips-calc-img/icon-dollar.svg';
 import { blockInvalidChar } from '../invalidChar';
 import PropTypes from 'prop-types';
 
-function BillContainer({ setBill }) {
+function BillContainer({ setBill }, ref) {
+  BillContainer.propTypes = {
+    setBill: PropTypes.func,
+  };
+
+  const billRef = useRef(0);
+
+  useImperativeHandle(ref, () => ({
+    resetFields() {
+      billRef.current.value = '';
+    },
+  }));
   return (
     <div className="flex flex-col relative">
       <label className="text-tipsDarkCyan font-bold" htmlFor="bill">
         Bill
       </label>
       <input
+        ref={billRef}
         className="mt-2 bg-tipsWhiteColor h-12 rounded-md text-right pr-4 pl-9 text-2xl text-tipsDarkCyan font-bold focus:outline-none focus:border-tipsCyan focus:ring-tipsCyan focus:ring-2"
         type="number"
         placeholder="0"
@@ -26,8 +38,5 @@ function BillContainer({ setBill }) {
     </div>
   );
 }
-BillContainer.propTypes = {
-  setBill: PropTypes.func,
-};
 
-export default BillContainer;
+export default React.forwardRef(BillContainer);

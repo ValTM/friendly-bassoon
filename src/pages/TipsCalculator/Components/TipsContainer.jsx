@@ -1,29 +1,25 @@
-import React from 'react';
+import React, { useImperativeHandle, useRef } from 'react';
 import { blockInvalidChar } from '../invalidChar';
 import PropTypes from 'prop-types';
-// import { useRef } from 'react';
 
-function TipsContainer({ setTip }) {
-  const handleButtonClick = (e) => {
-    e.preventDefault();
-    setTip(parseInt(e.target.value));
-    const btn = document.getElementById(e.target.id);
-    let btns = Array.from(document.getElementById('btn--container').children);
-    for (let btn of btns) {
-      if (btn.classList.contains('bg-tipsCyan')) {
-        btn.classList.remove('bg-tipsCyan');
-        btn.classList.add('bg-tipsDarkCyan');
-      }
-    }
-    btn.classList.add('bg-tipsCyan');
+function TipsContainer({ setTip }, ref) {
+  TipsContainer.propTypes = {
+    setTip: PropTypes.any,
   };
-  const buttonValues = [
-    { value: 5, id: 1 },
-    { value: 10, id: 2 },
-    { value: 15, id: 3 },
-    { value: 25, id: 4 },
-    { value: 50, id: 5 },
-  ];
+  const containerRef = useRef();
+  const inputRef = useRef();
+
+  const handleButtonClick = (value) => {
+    setTip(value);
+    const selectedButton = Array.from(containerRef.current.children).find(
+      (btn) =>
+        btn.tagName.toLowerCase() === 'button' &&
+        btn.classList.contains('bg-tipsCyan')
+    );
+    selectedButton?.classList.remove('bg-tipsCyan');
+    selectedButton?.classList.add('bg-tipsDarkCyan');
+  };
+  const buttonValues = [5, 10, 15, 25, 50];
 
   const maxLengthCheck = (event) => {
     const eventTarget = event.target;
@@ -35,28 +31,43 @@ function TipsContainer({ setTip }) {
       eventTarget.value = null;
     }
   };
+
+  useImperativeHandle(ref, () => ({
+    resetFields() {
+      Array.from(containerRef.current.children).forEach((btn) => {
+        if (btn.tagName.toLowerCase() === 'button') {
+          btn.classList.remove('bg-tipsCyan');
+          btn.classList.add('bg-tipsDarkCyan');
+        }
+      });
+      inputRef.current.value = '';
+    },
+  }));
+
   return (
     <div className="mt-10">
       <label className="text-tipsDarkCyan font-bold" htmlFor="tip">
         Select Tip %
       </label>
-      <div id="btn--container" className=" flex flex-wrap justify-between mt-2">
-        {buttonValues.map((data, i) => {
+      <div ref={containerRef} className="flex flex-wrap justify-between mt-2">
+        {buttonValues.map((value, i) => {
           return (
             <React.Fragment key={i}>
               <button
-                // ref={btn}
-                id={data.id}
-                className="my-2  w-[49%] py-2 bg-tipsDarkCyan text-tipsWhiteColor text-center text-2xl rounded-lg font-bold hover:bg-tipsCyan hover:text-tipsDarkCyan"
-                value={data.value}
-                onClick={handleButtonClick}
+                className="my-2 w-[49%] py-2 bg-tipsDarkCyan text-tipsWhiteColor text-center text-2xl rounded-lg font-bold hover:bg-tipsCyan hover:text-tipsDarkCyan"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleButtonClick(value);
+                  e.target.classList.add('bg-tipsCyan');
+                }}
               >
-                {data.value}%
+                {value}%
               </button>
             </React.Fragment>
           );
         })}
         <input
+          ref={inputRef}
           className="my-2  w-[49%] py-2 bg-tipsWhiteColor text-tipsDarkCyan text-center text-2xl rounded-lg font-bold text-right pr-2 pl-2 focus:outline-none focus:border-tipsCyan focus:ring-tipsCyan focus:ring-2 xl:pr-4"
           placeholder="Custom"
           type="tel"
@@ -70,8 +81,4 @@ function TipsContainer({ setTip }) {
   );
 }
 
-TipsContainer.propTypes = {
-  setTip: PropTypes.any,
-};
-
-export default TipsContainer;
+export default React.forwardRef(TipsContainer);
