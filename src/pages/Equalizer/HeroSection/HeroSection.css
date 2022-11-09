@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+:root {
+  --font-family: 'IBM Plex Sans', sans-serif;
+}
+.eq--body {
+  font-family: var(--font-family);
+  position: relative;
+}
+@media screen and (min-width: 1440px) {
+  #pattern1 {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 1875px) {
+  .eq--body {
+    width: 1400px;
+    margin: 0 auto;
+  }
+  #pattern1 {
+    width: 400px;
+  }
+  #hero--h1,
+  #hero--p {
+    margin-left: 0;
+  }
+  #logo {
+    margin-left: 20px;
+  }
+}
