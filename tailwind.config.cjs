@@ -3,7 +3,16 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      sans: ['Poppins', 'sans-serif'],
+      sans: ['"Open Sans"', 'sans-serif'],
+    },
+    colors: {
+      white: '#fff',
+      black: '#000',
+      gray: {
+        100: '#f3f4f6',
+        200: '#e5e7eb',
+        300: '#d1d5db',
+      },
     },
   },
   plugins: [],
