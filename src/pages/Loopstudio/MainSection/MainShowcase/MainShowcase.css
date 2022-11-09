@@ -1,0 +1,81 @@
+.avatar {
+  width: 300px;
+}
+.showcase--text {
+  font-family: var(--font-josefin);
+}
+.showcase--text p {
+  width: 250px;
+}
+@media screen and (min-width: 768px) {
+  .avatar {
+    width: 400px;
+  }
+  .showcase--text p {
+    width: 250px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .showcase--box {
+    width: 1000px;
+  }
+  .avatar {
+    width: 500px;
+  }
+  .showcase--text p {
+    width: 400px;
+    text-align: left;
+  }
+  .showcase--text h1 {
+    width: 400px;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .showcase--box {
+    width: 1250px;
+  }
+  .avatar {
+    width: 650px;
+  }
+  .showcase--text {
+    top: 100px;
+    right: 50px;
+    padding-left: 100px;
+  }
+  .showcase--text p {
+    width: 500px;
+    font-size: 20px;
+  }
+  .showcase--text h1 {
+    width: 500px;
+    line-height: 50px;
+    text-align: left;
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .showcase--box {
+    width: 1500px;
+    padding-left: 100px;
+  }
+  .avatar {
+    width: 650px;
+  }
+  .showcase--text {
+    margin-top: 50px;
+    margin-right: 100px;
+    right: 250px;
+    padding-left: 100px;
+  }
+  .showcase--text p {
+    width: 600px;
+    font-size: 20px;
+  }
+  .showcase--text h1 {
+    width: 500px;
+    line-height: 50px;
+    text-align: left;
+    font-size: 40px;
+  }
+}
