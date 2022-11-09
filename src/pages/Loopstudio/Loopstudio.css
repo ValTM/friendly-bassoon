@@ -3,8 +3,8 @@
 :root {
   --primary-white: hsl(0, 0%, 100%);
   --primary-black: hsl(0, 0%, 0%);
-  --primary-dark-gray: hsl(0, 0%, 55%);
-  --primary-very-dark-gray: hsl(0, 0%, 41%);
+  --primary-dark-gray: #8c8c8c;
+  --primary-very-dark-gray: #696969;
   --font-alata: 'Alata';
   --font-josefin: 'Josefin Sans';
 }
